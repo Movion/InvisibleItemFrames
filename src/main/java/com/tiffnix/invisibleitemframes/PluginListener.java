@@ -1,8 +1,5 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
-
 package com.tiffnix.invisibleitemframes;
+
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.ChatMessageType;
@@ -216,7 +213,7 @@ public class PluginListener implements Listener {
         final Boolean limitedCrafting = entity.getWorld().getGameRuleValue(GameRule.DO_LIMITED_CRAFTING);
         final boolean entityHasRecipe = entity.hasDiscoveredRecipe(InvisibleItemFrames.RECIPE_KEY);
         if (Boolean.TRUE.equals(limitedCrafting) && !entityHasRecipe) {
-             event.getInventory().setResult(new ItemStack(Material.AIR));
+            event.getInventory().setResult(new ItemStack(Material.AIR));
         }
     }
 }
